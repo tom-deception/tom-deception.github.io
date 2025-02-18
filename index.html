@@ -1,0 +1,317 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="The Lazy Student's Dream: Can ChatGPT Actually Pass an Engineering Course?"
+    />
+    <meta name="keywords" content="Keywords" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      The Lazy Student's Dream: Can ChatGPT Actually Pass an Engineering Course?
+    </title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <style>
+      .question-section {
+        margin: 2rem 0;
+        padding: 2rem;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+      }
+
+      .image-comparison {
+        display: flex;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .image-container {
+        flex: 1;
+        text-align: center;
+      }
+
+      .image-container img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .question-type {
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                The Lazy Student's Dream: Can ChatGPT Actually Pass an
+                Engineering Course?
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="https://gokulp01.github.io/">Gokul Puthumanaillam</a
+                  ><sup></sup>,</span
+                >
+                <span class="author-block">
+                  <a href="https://mornik.web.illinois.edu/">Melkior Ornik</a
+                  ><sup></sup>
+                </span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"
+                  ><sup></sup>University of Illinois Urbana-Champaign</span
+                >
+                <!--<span class="author-block"><sup>2</sup>Department Name</span>-->
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- PDF Link. -->
+                  <span class="link-block">
+                    <a href="#" class="button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                  <!-- Code Link. -->
+                  <span class="link-block">
+                    <a href="#" class="button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Abstract Section -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                This paper presents a comprehensive investigation into the
+                capability of Large Language Models (LLMs) to successfully
+                complete a semester-long undergraduate control systems course.
+                Through systematic evaluation of approximately 115 course
+                deliverables, including homework assignments, midterm
+                examinations, programming projects, and a final exam, we assess
+                LLM performance using ChatGPT under a ``minimal effort" protocol
+                that simulates realistic student usage patterns. The
+                investigation employs a rigorous testing methodology across
+                multiple assessment formats, from auto-graded multiple choice
+                questions to complex Python programming tasks and long-form
+                analytical writing. Our analysis provides quantitative insights
+                into AI's strengths and limitations in handling mathematical
+                formulations, coding challenges, and theoretical concepts in
+                control systems engineering. The findings inform critical
+                discussions about course design adaptation in response to AI
+                advancement, moving beyond simple prohibition towards thoughtful
+                integration of these tools in engineering education. This
+                research represents a whole-course case study examining LLM
+                performance in mathematics-based engineering education, offering
+                insights for educators and institutions navigating the
+                intersection of artificial intelligence and technical education.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Syllabus Links Section -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <div class="content">
+              <h3 class="title is-4">Course Resources</h3>
+              <div class="buttons">
+                <a href="#" class="button is-link is-outlined">
+                  <span class="icon">
+                    <i class="fas fa-book"></i>
+                  </span>
+                  <span>Syllabus</span>
+                </a>
+                <a href="#" class="button is-link is-outlined">
+                  <span class="icon">
+                    <i class="fas fa-globe"></i>
+                  </span>
+                  <span>Project Website</span>
+                </a>
+                <a href="#" class="button is-link is-outlined">
+                  <span class="icon">
+                    <i class="fas fa-file-alt"></i>
+                  </span>
+                  <span>Exam Question Papers</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Questions Section -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Interactive Questions</h2>
+
+            <!-- Shot Type Selection -->
+            <div class="tabs is-centered is-boxed">
+              <ul id="shotTypeTabs">
+                <li class="is-active" data-shot="zeroshot"><a>Zero-Shot</a></li>
+                <li data-shot="multishot"><a>Multi-Shot</a></li>
+              </ul>
+            </div>
+
+            <!-- Randomizer Button -->
+            <div class="has-text-centered mb-6">
+              <button
+                class="button is-primary is-large"
+                onclick="showRandomImage()"
+              >
+                <span class="icon">
+                  <i class="fas fa-random"></i>
+                </span>
+                <span>Show Random Example</span>
+              </button>
+            </div>
+
+            <!-- Image Display Section -->
+            <div id="imageDisplay" class="content has-text-centered">
+              <!-- Images will be inserted here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .image-display img {
+        max-width: 100%;
+        margin: 1rem 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .image-container {
+        margin-bottom: 2rem;
+        background-color: #f5f5f5;
+        padding: 2rem;
+        border-radius: 8px;
+      }
+    </style>
+
+    <script>
+      // Define the image paths
+      const imagePaths = {
+        zeroshot: {
+          // Each set includes both 'im' and 'sm' images
+          mcq1: {
+            im: "images/zeroshot/mcq1-im.png",
+            sm: "images/zeroshot/mcq1-sm.png",
+          },
+          mcmcq: {
+            im: "images/zeroshot/mcmcq-im.png",
+            sm: "images/zeroshot/mcmcq-sm.png",
+          },
+          num1: {
+            im: "images/zeroshot/num1-im.png",
+            sm: "images/zeroshot/num1-sm.png",
+          },
+          code1: {
+            im: "images/zeroshot/code1-im.png",
+            sm: "images/zeroshot/code1-sm.png",
+          },
+          exam: {
+            im: "images/zeroshot/exam-im.png",
+            sm: "images/zeroshot/exam-sm.png",
+          },
+        },
+        multishot: {
+          // Each entry is a standalone chain-of-thought explanation
+          mcq: "images/multishot/mcq-ce.png",
+          mcq2: "images/multishot/mcq-ce2.png",
+          mmccq: "images/multishot/mmccq-ce.png",
+          num1: "images/multishot/num1-ce.png",
+          exam: "images/multishot/exam-ce.png",
+        },
+      };
+
+      let currentShot = "zeroshot";
+
+      function showRandomImage() {
+        const imageDisplay = document.getElementById("imageDisplay");
+
+        if (currentShot === "zeroshot") {
+          // Get all available keys for zero-shot
+          const keys = Object.keys(imagePaths.zeroshot);
+          const randomKey = keys[Math.floor(Math.random() * keys.length)];
+          const images = imagePaths.zeroshot[randomKey];
+
+          let html = '<div class="image-container">';
+          html += `<img src="${images.im}" alt="Question" class="mb-4">`;
+          html += `<img src="${images.sm}" alt="Solution" class="mb-4">`;
+          html += "</div>";
+          imageDisplay.innerHTML = html;
+        } else {
+          // Get all available images for multi-shot
+          const images = Object.values(imagePaths.multishot);
+          const randomImage = images[Math.floor(Math.random() * images.length)];
+
+          let html = '<div class="image-container">';
+          html += `<img src="${randomImage}" alt="Chain of thought explanation" class="mb-4">`;
+          html += "</div>";
+          imageDisplay.innerHTML = html;
+        }
+      }
+
+      // Tab switching functionality
+      document.addEventListener("DOMContentLoaded", () => {
+        const shotTabs = document.querySelectorAll("#shotTypeTabs li");
+
+        // Shot type switching
+        shotTabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            shotTabs.forEach((t) => t.classList.remove("is-active"));
+            tab.classList.add("is-active");
+            currentShot = tab.dataset.shot;
+            document.getElementById("imageDisplay").innerHTML = ""; // Clear current images
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
