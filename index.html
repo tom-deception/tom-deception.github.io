@@ -122,25 +122,22 @@
                 This paper presents a comprehensive investigation into the
                 capability of Large Language Models (LLMs) to successfully
                 complete a semester-long undergraduate control systems course.
-                Through systematic evaluation of approximately 115 course
-                deliverables, including homework assignments, midterm
-                examinations, programming projects, and a final exam, we assess
-                LLM performance using ChatGPT under a ``minimal effort" protocol
-                that simulates realistic student usage patterns. The
-                investigation employs a rigorous testing methodology across
-                multiple assessment formats, from auto-graded multiple choice
-                questions to complex Python programming tasks and long-form
-                analytical writing. Our analysis provides quantitative insights
-                into AI's strengths and limitations in handling mathematical
-                formulations, coding challenges, and theoretical concepts in
-                control systems engineering. The findings inform critical
+                Through evaluation of 115 course deliverables, we assess LLM
+                performance using ChatGPT under a "minimal effort" protocol that
+                simulates realistic student usage patterns. The investigation
+                employs a rigorous testing methodology across multiple
+                assessment formats, from auto-graded multiple choice questions
+                to complex Python programming tasks and long-form analytical
+                writing. Our analysis provides quantitative insights into AI's
+                strengths and limitations in handling mathematical formulations,
+                coding challenges, and theoretical concepts in control systems
+                engineering. The LLM achieved a B-grade performance (82.24%),
+                approaching but not exceeding the class average (84.99%), with
+                strongest results in structured assignments and greatest
+                limitations in open-ended projects. The findings inform
                 discussions about course design adaptation in response to AI
                 advancement, moving beyond simple prohibition towards thoughtful
-                integration of these tools in engineering education. This
-                research represents a whole-course case study examining LLM
-                performance in mathematics-based engineering education, offering
-                insights for educators and institutions navigating the
-                intersection of artificial intelligence and technical education.
+                integration of these tools in engineering education.
               </p>
             </div>
           </div>
@@ -148,45 +145,356 @@
       </div>
     </section>
 
-    <!-- Syllabus Links Section -->
+    <!-- Relevant Resources Section -->
     <section class="section">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column is-four-fifths">
-            <div class="content">
-              <h3 class="title is-4">Course Resources</h3>
-              <div class="buttons">
-                <a href="#" class="button is-link is-outlined">
-                  <span class="icon">
-                    <i class="fas fa-book"></i>
-                  </span>
-                  <span>Syllabus</span>
-                </a>
-                <a href="#" class="button is-link is-outlined">
-                  <span class="icon">
-                    <i class="fas fa-globe"></i>
-                  </span>
-                  <span>Project Website</span>
-                </a>
-                <a href="#" class="button is-link is-outlined">
-                  <span class="icon">
-                    <i class="fas fa-file-alt"></i>
-                  </span>
-                  <span>Exam Question Papers</span>
-                </a>
-              </div>
+            <h3 class="title is-4">
+              Relevant Resources and Links for the Paper
+            </h3>
+
+            <!-- Syllabus -->
+            <div class="mb-4">
+              <a
+                href="assets/syllabus.pdf"
+                class="button is-link is-outlined"
+                target="_blank"
+              >
+                <span class="icon">
+                  <i class="fas fa-book"></i>
+                </span>
+                <span>Syllabus</span>
+              </a>
+            </div>
+
+            <!-- Exams -->
+            <div class="mb-4">
+              <a
+                href="assets/midterm1.pdf"
+                class="button is-link is-outlined mr-2"
+                target="_blank"
+              >
+                <span class="icon">
+                  <i class="fas fa-file-alt"></i>
+                </span>
+                <span>Midterm 1</span>
+              </a>
+              <a
+                href="assets/midterm2.pdf"
+                class="button is-link is-outlined mr-2"
+                target="_blank"
+              >
+                <span class="icon">
+                  <i class="fas fa-file-alt"></i>
+                </span>
+                <span>Midterm 2</span>
+              </a>
+              <a
+                href="assets/final.pdf"
+                class="button is-link is-outlined"
+                target="_blank"
+              >
+                <span class="icon">
+                  <i class="fas fa-file-alt"></i>
+                </span>
+                <span>Final Exam</span>
+              </a>
+            </div>
+
+            <!-- Design Project -->
+            <div class="mb-4">
+              <a
+                href="https://uiuc-ae353.github.io"
+                class="button is-link is-outlined"
+                target="_blank"
+              >
+                <span class="icon">
+                  <i class="fas fa-project-diagram"></i>
+                </span>
+                <span>Design Project</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Overview of Results Section -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Overview of Results</h2>
+
+            <div class="content has-text-justified mb-5">
+              <p>
+                Overall performance: Image below shows LLM performance across
+                assessment types and prompting methods, based on three runs per
+                question. While ChatGPT's exact wording varied between runs,
+                these variations had minimal impact on scoring. Several key
+                patterns emerge: First, context-enhanced prompting consistently
+                outperforms other methodologies across all question types.
+                Second, the progression from image-based to text-based inputs
+                shows systematic improvement, particularly in questions
+                involving mathematical notation. The LLM achieved an overall
+                score of 82.24% using context-enhanced prompting, compared to
+                the class average of 84.99% -- both corresponding to a 'B'
+                grade. This performance difference manifests distinctly across
+                assessments: minimal in structured assignments but substantial
+                in open-ended assessments.
+              </p>
+            </div>
+
+            <!-- Results Images -->
+            <div class="columns is-mobile is-multiline">
+              <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                <figure class="image">
+                  <img src="assets/result1.png" alt="Overall performance" />
+                  <figcaption class="has-text-centered mt-2">
+                    (a) Overall performance
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                <figure class="image">
+                  <img src="assets/result2.png" alt="HW performance" />
+                  <figcaption class="has-text-centered mt-2">
+                    (b) HW performance
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                <figure class="image">
+                  <img src="assets/result3.png" alt="Project performance" />
+                  <figcaption class="has-text-centered mt-2">
+                    (c) Project performance
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                <figure class="image">
+                  <img src="assets/result4.png" alt="Examination performance" />
+                  <figcaption class="has-text-centered mt-2">
+                    (d) Examination performance
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Performance Data Section -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <h2 class="title is-3">Performance Data</h2>
+
+            <!-- Performance Table -->
+            <div class="table-container mb-6">
+              <table
+                class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
+              >
+                <caption class="has-text-centered is-size-5 mb-4">
+                  <strong>Table 1:</strong>
+                  LLM performance across assessment types using various
+                  prompting methodologies.
+                </caption>
+                <thead>
+                  <tr>
+                    <th colspan="2" class="has-text-centered">Question Type</th>
+                    <th colspan="2" class="has-text-centered">Image Based</th>
+                    <th colspan="2" class="has-text-centered">
+                      Simplified Text
+                    </th>
+                    <th class="has-text-centered">Context-Enhanced</th>
+                  </tr>
+                  <tr>
+                    <th>Category</th>
+                    <th>Sub-type</th>
+                    <th>Zero-shot (%)</th>
+                    <th>Multi-shot (%)</th>
+                    <th>Zero-shot (%)</th>
+                    <th>Multi-shot (%)</th>
+                    <th>Multi-shot (%)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- HW Section -->
+                  <tr>
+                    <td rowspan="4">HW</td>
+                    <td>MCQ</td>
+                    <td>89.5</td>
+                    <td>93.2</td>
+                    <td>91.2</td>
+                    <td>94.8</td>
+                    <td>96.5</td>
+                  </tr>
+                  <tr>
+                    <td>MCMCQ</td>
+                    <td>85.3</td>
+                    <td>88.4</td>
+                    <td>86.7</td>
+                    <td>90.2</td>
+                    <td>92.1</td>
+                  </tr>
+                  <tr>
+                    <td>Numerical</td>
+                    <td>82.4</td>
+                    <td>85.6</td>
+                    <td>84.2</td>
+                    <td>87.5</td>
+                    <td>89.3</td>
+                  </tr>
+                  <tr>
+                    <td>Code-Based</td>
+                    <td>86.5</td>
+                    <td>89.8</td>
+                    <td>88.2</td>
+                    <td>91.3</td>
+                    <td>93.2</td>
+                  </tr>
+
+                  <!-- Projects Section with dashed border -->
+                  <tr class="has-background-light">
+                    <td rowspan="2">Projects</td>
+                    <td>Code</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>56.2</td>
+                    <td>57.6</td>
+                    <td>58.5</td>
+                  </tr>
+                  <tr class="has-background-light">
+                    <td>Report</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>62.8</td>
+                    <td>64.9</td>
+                    <td>65.8</td>
+                  </tr>
+
+                  <!-- Exam Section with dashed border -->
+                  <tr>
+                    <td rowspan="3">Exam</td>
+                    <td>Mid-Term</td>
+                    <td>85.3</td>
+                    <td>87.5</td>
+                    <td>86.7</td>
+                    <td>88.8</td>
+                    <td>89.8</td>
+                  </tr>
+                  <tr>
+                    <td>Finals: Written</td>
+                    <td>83.0</td>
+                    <td>84.1</td>
+                    <td>83.8</td>
+                    <td>84.6</td>
+                    <td>86.5</td>
+                  </tr>
+                  <tr>
+                    <td>Finals: Auto-graded</td>
+                    <td>93.5</td>
+                    <td>95.3</td>
+                    <td>94.8</td>
+                    <td>96.2</td>
+                    <td>97.4</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Performance Analysis Text -->
+            <div class="content">
+              <h4 class="title is-4 has-text-weight-bold is-italic">
+                Homework Performance:
+              </h4>
+              <p>
+                Homework performance reveals subtle patterns across question
+                types. The LLM achieved 90.38% against a class average of
+                91.44%, with performance varying by question type. MCQs showed
+                the highest success, followed by code-based questions, MCMCQ,
+                and numerical problems. This hierarchy persisted across all
+                prompting methodologies, though with varying gaps. The
+                multi-shot approach proved particularly effective for MCQs.
+                Analysis of the 92 homework questions reveals that performance
+                degradation correlated strongly with question complexity:
+                single-concept questions saw higher success rates compared to
+                integration-heavy problems.
+              </p>
+
+              <h4 class="title is-4 has-text-weight-bold is-italic mt-5">
+                Examination Performance:
+              </h4>
+              <p>
+                Examination analysis provides critical insights into LLM
+                capabilities under different assessment conditions. The model
+                achieved 89.72% overall compared to the class average of 84.81%,
+                but this aggregate masks important variations. Auto-graded
+                components of the final (97.4%) significantly outperformed
+                written sections (86.5%), with midterm performance (89.8%)
+                showing intermediate results. This pattern held consistent
+                across prompting methodologies. The performance gap between
+                written and auto-graded components suggests fundamental
+                differences in the model's ability to handle structured versus
+                open-ended problems.
+              </p>
+
+              <h4 class="title is-4 has-text-weight-bold is-italic mt-5">
+                Project Performance:
+              </h4>
+              <p>
+                Project evaluation exposed systematic limitations in LLM
+                capabilities, with the most significant performance gap observed
+                (64.34% versus class average 80.99%). The distinction between
+                code implementation and report writing reveals specific
+                challenges. Code submissions showed consistent patterns of
+                failure in system integration, error handling, and optimization,
+                while maintaining basic functional correctness. Report analysis
+                indicates stronger performance in methodology description and
+                result presentation but weaker performance in critical analysis
+                and design justification. Neither image-based nor multi-shot
+                approaches provided significant improvements in project
+                performance, suggesting fundamental limitations rather than
+                methodology-dependent constraints.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      /* Custom styles for table */
+      .table-container {
+        overflow-x: auto;
+      }
+
+      .table th,
+      .table td {
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .table caption {
+        caption-side: top;
+      }
+
+      /* Improve table readability on mobile */
+      @media screen and (max-width: 768px) {
+        .table {
+          font-size: 0.85rem;
+        }
+      }
+    </style>
     <!-- Interactive Questions Section -->
     <section class="section">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">Interactive Questions</h2>
+            <h2 class="title is-3">Example Questions and Response</h2>
 
             <!-- Shot Type Selection -->
             <div class="tabs is-centered is-boxed">
