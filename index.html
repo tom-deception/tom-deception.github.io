@@ -4,14 +4,14 @@
     <meta charset="utf-8" />
     <meta
       name="description"
-      content="The Lazy Student's Dream: ChatGPT Passing an Engineering Course on Its Own"
+      content="TRACE: A Self-Improving Framework for Robot Behavior Forecasting with Vision-Language Models"
     />
     <meta name="keywords" content="Keywords" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
-      The Lazy Student's Dream: ChatGPT Passing an Engineering Course on Its Own
+      TRACE: A Self-Improving Framework for Robot Behavior Forecasting with
+      Vision-Language Models
     </title>
-
     <link
       href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
       rel="stylesheet"
@@ -24,7 +24,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-
     <style>
       .question-section {
         margin: 2rem 0;
@@ -32,26 +31,40 @@
         background-color: #f5f5f5;
         border-radius: 8px;
       }
-
       .image-comparison {
         display: flex;
         gap: 2rem;
         margin-top: 2rem;
       }
-
       .image-container {
         flex: 1;
         text-align: center;
       }
-
       .image-container img {
         max-width: 100%;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
-
       .question-type {
         margin-bottom: 1rem;
+      }
+      .author-block {
+        margin-right: 5px;
+      }
+      .author-equal {
+        font-size: 0.85em;
+        vertical-align: super;
+      }
+      .institution-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      .institution-logo {
+        max-height: 80px;
+        width: auto;
       }
     </style>
   </head>
@@ -62,32 +75,62 @@
           <div class="columns is-centered">
             <div class="column has-text-centered">
               <h1 class="title is-1 publication-title">
-                The Lazy Student's Dream: ChatGPT Passing an Engineering Course on Its Own
+                TRACE: A Self-Improving Framework for Robot Behavior Forecasting
+                with Vision-Language Models
               </h1>
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
-                  <a href="https://gokulp01.github.io/">Gokul Puthumanaillam</a
-                  ><sup></sup>,</span
-                >
+                  <a href="https://gokulp01.github.io/">Gokul Puthumanaillam</a><sup>1</sup><span class="author-equal">*</span>,
+                </span>
                 <span class="author-block">
-                  <a href="https://mornik.web.illinois.edu/">Melkior Ornik</a
-                  ><sup></sup>
+                  <a href="https://scholar.google.com/citations?user=O8ZG568AAAAJ&hl=en">Paulo Padrao</a><sup>2</sup><span class="author-equal">*</span>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=w8-ptKYAAAAJ&hl=en">Jose Fuentes</a><sup>2</sup><span class="author-equal">*</span>,
+                </span>
+                <span class="author-block">
+                  <a href="https://pranaythangeda.com/">Pranay Thangeda</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a>William E. Schafer</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a>Jae Hyuk Song</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=lN1xO34AAAAJ&hl=en">Karan Jagdale</a><sup>3</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://users.cis.fiu.edu/~jabobadi/">Leonardo Bobadilla</a><sup>2</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://mornik.web.illinois.edu/">Melkior Ornik</a><sup>1</sup>
                 </span>
               </div>
-
-              <div class="is-size-5 publication-authors">
-                <span class="author-block"
-                  ><sup></sup>University of Illinois Urbana-Champaign</span
-                >
-                <!--<span class="author-block"><sup>2</sup>Department Name</span>-->
+              
+              <div class="is-size-6 publication-institutions">
+                <span class="author-block"><sup>1</sup> University of Illinois Urbana-Champaign</span>
+                <span class="author-block"><sup>2</sup> Florida International University</span>
+                <span class="author-block"><sup>3</sup> Lucid Group, Inc.</span>
               </div>
-
-              <div class="column has-text-centered">
+              
+              <div class="is-size-7 publication-note mt-2">
+                <span>* Equal contribution</span>
+              </div>
+              
+              <!-- Institution Logos -->
+              <div class="institution-logos">
+                <img src="assets/uiuc.png" alt="UIUC Logo" class="institution-logo" />
+                <img src="assets/fiu.svg" alt="FIU Logo" class="institution-logo" />
+                <img src="assets/lucid.jpg" alt="Lucid Logo" class="institution-logo" />
+              </div>
+              
+              <div class="column has-text-centered mt-4">
                 <div class="publication-links">
                   <!-- PDF Link. -->
                   <span class="link-block">
                     <a
-                      href="assets/paper.pdf"
+                      href="https://arxiv.org/abs/2503.00761"
                       class="button is-normal is-rounded is-dark"
                     >
                       <span class="icon">
@@ -99,7 +142,7 @@
                   <!-- Code Link. -->
                   <span class="link-block">
                     <a
-                      href="https://github.com/gradegpt/gradegpt.github.io/tree/main"
+                      href="https://github.com/trace-robotics/trace-robotics.github.io"
                       class="button is-normal is-rounded is-dark"
                     >
                       <span class="icon">
@@ -115,516 +158,326 @@
         </div>
       </div>
     </section>
-
-    <!-- Abstract Section -->
-    <section class="section">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Abstract</h2>
-            <div class="content has-text-justified">
-              <p>
-                This paper presents a comprehensive investigation into the
-                capability of Large Language Models (LLMs) to successfully
-                complete a semester-long undergraduate control systems course.
-                Through evaluation of 115 course deliverables, we assess LLM
-                performance using ChatGPT under a "minimal effort" protocol that
-                simulates realistic student usage patterns. The investigation
-                employs a rigorous testing methodology across multiple
-                assessment formats, from auto-graded multiple choice questions
-                to complex Python programming tasks and long-form analytical
-                writing. Our analysis provides quantitative insights into AI's
-                strengths and limitations in handling mathematical formulations,
-                coding challenges, and theoretical concepts in control systems
-                engineering. The LLM achieved a B-grade performance (82.24%),
-                approaching but not exceeding the class average (84.99%), with
-                strongest results in structured assignments and greatest
-                limitations in open-ended projects. The findings inform
-                discussions about course design adaptation in response to AI
-                advancement, moving beyond simple prohibition towards thoughtful
-                integration of these tools in engineering education.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Relevant Resources Section -->
-    <section class="section">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column is-four-fifths">
-            <h3 class="title is-4">
-              Relevant Resources and Links for the Paper
-            </h3>
-
-            <!-- Syllabus -->
-            <div class="mb-4">
-              <a
-                href="assets/syllabus.pdf"
-                class="button is-link is-outlined"
-                target="_blank"
-              >
-                <span class="icon">
-                  <i class="fas fa-book"></i>
-                </span>
-                <span>Syllabus</span>
-              </a>
-            </div>
-
-            <!-- Exams -->
-            <div class="mb-4">
-              <a
-                href="assets/midterm1.pdf"
-                class="button is-link is-outlined mr-2"
-                target="_blank"
-              >
-                <span class="icon">
-                  <i class="fas fa-file-alt"></i>
-                </span>
-                <span>Midterm 1</span>
-              </a>
-              <a
-                href="assets/midterm2.pdf"
-                class="button is-link is-outlined mr-2"
-                target="_blank"
-              >
-                <span class="icon">
-                  <i class="fas fa-file-alt"></i>
-                </span>
-                <span>Midterm 2</span>
-              </a>
-              <a
-                href="assets/final.pdf"
-                class="button is-link is-outlined"
-                target="_blank"
-              >
-                <span class="icon">
-                  <i class="fas fa-file-alt"></i>
-                </span>
-                <span>Final Exam</span>
-              </a>
-            </div>
-
-            <!-- Design Project -->
-            <div class="mb-4">
-              <a
-                href="https://uiuc-ae353.github.io"
-                class="button is-link is-outlined"
-                target="_blank"
-              >
-                <span class="icon">
-                  <i class="fas fa-project-diagram"></i>
-                </span>
-                <span>Design Project</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Overview of Results Section -->
-    <section class="section">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Overview of Results</h2>
-
-            <div class="content has-text-justified mb-5">
-              <p>
-                Overall performance: Image below shows LLM performance across
-                assessment types and prompting methods, based on three runs per
-                question. While ChatGPT's exact wording varied between runs,
-                these variations had minimal impact on scoring. Several key
-                patterns emerge: First, context-enhanced prompting consistently
-                outperforms other methodologies across all question types.
-                Second, the progression from image-based to text-based inputs
-                shows systematic improvement, particularly in questions
-                involving mathematical notation. The LLM achieved an overall
-                score of 82.24% using context-enhanced prompting, compared to
-                the class average of 84.99% -- both corresponding to a 'B'
-                grade. This performance difference manifests distinctly across
-                assessments: minimal in structured assignments but substantial
-                in open-ended assessments.
-              </p>
-            </div>
-
-            <!-- Results Images -->
-            <div class="columns is-mobile is-multiline">
-              <div class="column is-3-desktop is-6-tablet is-12-mobile">
-                <figure class="image">
-                  <img src="assets/result1.png" alt="Overall performance" />
-                  <figcaption class="has-text-centered mt-2">
-                    (a) Overall performance
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="column is-3-desktop is-6-tablet is-12-mobile">
-                <figure class="image">
-                  <img src="assets/result2.png" alt="HW performance" />
-                  <figcaption class="has-text-centered mt-2">
-                    (b) HW performance
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="column is-3-desktop is-6-tablet is-12-mobile">
-                <figure class="image">
-                  <img src="assets/result3.png" alt="Project performance" />
-                  <figcaption class="has-text-centered mt-2">
-                    (c) Project performance
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="column is-3-desktop is-6-tablet is-12-mobile">
-                <figure class="image">
-                  <img src="assets/result4.png" alt="Examination performance" />
-                  <figcaption class="has-text-centered mt-2">
-                    (d) Examination performance
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Performance Data Section -->
-    <section class="section">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column is-full">
-            <h2 class="title is-3">Performance Data</h2>
-
-            <!-- Performance Table -->
-            <div class="table-container mb-6">
-              <table
-                class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
-              >
-                <caption class="has-text-centered is-size-5 mb-4">
-                  <strong>Table 1:</strong>
-                  LLM performance across assessment types using various
-                  prompting methodologies.
-                </caption>
-                <thead>
-                  <tr>
-                    <th colspan="2" class="has-text-centered">Question Type</th>
-                    <th colspan="2" class="has-text-centered">Image Based</th>
-                    <th colspan="2" class="has-text-centered">
-                      Simplified Text
-                    </th>
-                    <th class="has-text-centered">Context-Enhanced</th>
-                  </tr>
-                  <tr>
-                    <th>Category</th>
-                    <th>Sub-type</th>
-                    <th>Zero-shot (%)</th>
-                    <th>Multi-shot (%)</th>
-                    <th>Zero-shot (%)</th>
-                    <th>Multi-shot (%)</th>
-                    <th>Multi-shot (%)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <!-- HW Section -->
-                  <tr>
-                    <td rowspan="4">HW</td>
-                    <td>MCQ</td>
-                    <td>89.5</td>
-                    <td>93.2</td>
-                    <td>91.2</td>
-                    <td>94.8</td>
-                    <td>96.5</td>
-                  </tr>
-                  <tr>
-                    <td>MCMCQ</td>
-                    <td>85.3</td>
-                    <td>88.4</td>
-                    <td>86.7</td>
-                    <td>90.2</td>
-                    <td>92.1</td>
-                  </tr>
-                  <tr>
-                    <td>Numerical</td>
-                    <td>82.4</td>
-                    <td>85.6</td>
-                    <td>84.2</td>
-                    <td>87.5</td>
-                    <td>89.3</td>
-                  </tr>
-                  <tr>
-                    <td>Code-Based</td>
-                    <td>86.5</td>
-                    <td>89.8</td>
-                    <td>88.2</td>
-                    <td>91.3</td>
-                    <td>93.2</td>
-                  </tr>
-
-                  <!-- Projects Section with dashed border -->
-                  <tr class="has-background-light">
-                    <td rowspan="2">Projects</td>
-                    <td>Code</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>56.2</td>
-                    <td>57.6</td>
-                    <td>58.5</td>
-                  </tr>
-                  <tr class="has-background-light">
-                    <td>Report</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>62.8</td>
-                    <td>64.9</td>
-                    <td>65.8</td>
-                  </tr>
-
-                  <!-- Exam Section with dashed border -->
-                  <tr>
-                    <td rowspan="3">Exam</td>
-                    <td>Mid-Term</td>
-                    <td>85.3</td>
-                    <td>87.5</td>
-                    <td>86.7</td>
-                    <td>88.8</td>
-                    <td>89.8</td>
-                  </tr>
-                  <tr>
-                    <td>Finals: Written</td>
-                    <td>83.0</td>
-                    <td>84.1</td>
-                    <td>83.8</td>
-                    <td>84.6</td>
-                    <td>86.5</td>
-                  </tr>
-                  <tr>
-                    <td>Finals: Auto-graded</td>
-                    <td>93.5</td>
-                    <td>95.3</td>
-                    <td>94.8</td>
-                    <td>96.2</td>
-                    <td>97.4</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- Performance Analysis Text -->
-            <div class="content">
-              <h4 class="title is-4 has-text-weight-bold is-italic">
-                Homework Performance:
-              </h4>
-              <p>
-                Homework performance reveals subtle patterns across question
-                types. The LLM achieved 90.38% against a class average of
-                91.44%, with performance varying by question type. MCQs showed
-                the highest success, followed by code-based questions, MCMCQ,
-                and numerical problems. This hierarchy persisted across all
-                prompting methodologies, though with varying gaps. The
-                multi-shot approach proved particularly effective for MCQs.
-                Analysis of the 92 homework questions reveals that performance
-                degradation correlated strongly with question complexity:
-                single-concept questions saw higher success rates compared to
-                integration-heavy problems.
-              </p>
-
-              <h4 class="title is-4 has-text-weight-bold is-italic mt-5">
-                Examination Performance:
-              </h4>
-              <p>
-                Examination analysis provides critical insights into LLM
-                capabilities under different assessment conditions. The model
-                achieved 89.72% overall compared to the class average of 84.81%,
-                but this aggregate masks important variations. Auto-graded
-                components of the final (97.4%) significantly outperformed
-                written sections (86.5%), with midterm performance (89.8%)
-                showing intermediate results. This pattern held consistent
-                across prompting methodologies. The performance gap between
-                written and auto-graded components suggests fundamental
-                differences in the model's ability to handle structured versus
-                open-ended problems.
-              </p>
-
-              <h4 class="title is-4 has-text-weight-bold is-italic mt-5">
-                Project Performance:
-              </h4>
-              <p>
-                Project evaluation exposed systematic limitations in LLM
-                capabilities, with the most significant performance gap observed
-                (64.34% versus class average 80.99%). The distinction between
-                code implementation and report writing reveals specific
-                challenges. Code submissions showed consistent patterns of
-                failure in system integration, error handling, and optimization,
-                while maintaining basic functional correctness. Report analysis
-                indicates stronger performance in methodology description and
-                result presentation but weaker performance in critical analysis
-                and design justification. Neither image-based nor multi-shot
-                approaches provided significant improvements in project
-                performance, suggesting fundamental limitations rather than
-                methodology-dependent constraints.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <style>
-      /* Custom styles for table */
-      .table-container {
-        overflow-x: auto;
-      }
-
-      .table th,
-      .table td {
-        text-align: center;
-        vertical-align: middle;
-      }
-
-      .table caption {
-        caption-side: top;
-      }
-
-      /* Improve table readability on mobile */
-      @media screen and (max-width: 768px) {
-        .table {
-          font-size: 0.85rem;
-        }
-      }
-    </style>
-    <!-- Interactive Questions Section -->
-    <section class="section">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Example Questions and Response</h2>
-
-            <!-- Shot Type Selection -->
-            <div class="tabs is-centered is-boxed">
-              <ul id="shotTypeTabs">
-                <li class="is-active" data-shot="zeroshot"><a>Zero-Shot</a></li>
-                <li data-shot="multishot"><a>Multi-Shot</a></li>
-              </ul>
-            </div>
-
-            <!-- Randomizer Button -->
-            <div class="has-text-centered mb-6">
-              <button
-                class="button is-primary is-large"
-                onclick="showRandomImage()"
-              >
-                <span class="icon">
-                  <i class="fas fa-random"></i>
-                </span>
-                <span>Show Random Example</span>
-              </button>
-            </div>
-
-            <!-- Image Display Section -->
-            <div id="imageDisplay" class="content has-text-centered">
-              <!-- Images will be inserted here -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <style>
-      .image-display img {
-        max-width: 100%;
-        margin: 1rem 0;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-
-      .image-container {
-        margin-bottom: 2rem;
-        background-color: #f5f5f5;
-        padding: 2rem;
-        border-radius: 8px;
-      }
-    </style>
-
-    <script>
-      // Define the image paths
-      const imagePaths = {
-        zeroshot: {
-          // Each set includes both 'im' and 'sm' images
-          mcq1: {
-            im: "images/zeroshot/mcq1-im.png",
-            sm: "images/zeroshot/mcq1-sm.png",
-          },
-          mcmcq: {
-            im: "images/zeroshot/mcmcq-im.png",
-            sm: "images/zeroshot/mcmcq-sm.png",
-          },
-          num1: {
-            im: "images/zeroshot/num1-im.png",
-            sm: "images/zeroshot/num1-sm.png",
-          },
-          code1: {
-            im: "images/zeroshot/code1-im.png",
-            sm: "images/zeroshot/code1-sm.png",
-          },
-          exam: {
-            im: "images/zeroshot/exam-im.png",
-            sm: "images/zeroshot/exam-sm.png",
-          },
-        },
-        multishot: {
-          // Each entry is a standalone chain-of-thought explanation
-          mcq: "images/multishot/mcq-ce.png",
-          mcq2: "images/multishot/mcq-ce2.png",
-          mmccq: "images/multishot/mmccq-ce.png",
-          num1: "images/multishot/num1-ce.png",
-          exam: "images/multishot/exam-ce.png",
-        },
-      };
-
-      let currentShot = "zeroshot";
-
-      function showRandomImage() {
-        const imageDisplay = document.getElementById("imageDisplay");
-
-        if (currentShot === "zeroshot") {
-          // Get all available keys for zero-shot
-          const keys = Object.keys(imagePaths.zeroshot);
-          const randomKey = keys[Math.floor(Math.random() * keys.length)];
-          const images = imagePaths.zeroshot[randomKey];
-
-          let html = '<div class="image-container">';
-          html += `<img src="${images.im}" alt="Question" class="mb-4">`;
-          html += `<img src="${images.sm}" alt="Solution" class="mb-4">`;
-          html += "</div>";
-          imageDisplay.innerHTML = html;
-        } else {
-          // Get all available images for multi-shot
-          const images = Object.values(imagePaths.multishot);
-          const randomImage = images[Math.floor(Math.random() * images.length)];
-
-          let html = '<div class="image-container">';
-          html += `<img src="${randomImage}" alt="Chain of thought explanation" class="mb-4">`;
-          html += "</div>";
-          imageDisplay.innerHTML = html;
-        }
-      }
-
-      // Tab switching functionality
-      document.addEventListener("DOMContentLoaded", () => {
-        const shotTabs = document.querySelectorAll("#shotTypeTabs li");
-
-        // Shot type switching
-        shotTabs.forEach((tab) => {
-          tab.addEventListener("click", () => {
-            shotTabs.forEach((t) => t.classList.remove("is-active"));
-            tab.classList.add("is-active");
-            currentShot = tab.dataset.shot;
-            document.getElementById("imageDisplay").innerHTML = ""; // Clear current images
-          });
-        });
-      });
-    </script>
   </body>
+</html>
+
+  <!-- Abstract Section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Predicting the near-term behavior of a reactive agent is crucial in many robotic scenarios, yet remains challenging when observations of that agent are sparse or intermittent. Vision-Language Models (VLMs) offer a promising avenue by integrating textual domain knowledge with visual cues, but their one-shot predictions often miss important edge cases and unusual maneuvers. Our key insight is that <span style="color: #3273dc;">iterative, counterfactual exploration</span>--where a dedicated module probes each proposed behavior hypothesis, explicitly represented as a plausible trajectory, for overlooked possibilities--can significantly enhance VLM-based behavioral forecasting.
+              We present <span style="color: #3273dc;">TRACE (Tree-of-thought Reasoning And Counterfactual Exploration)</span>, an inference framework that couples tree-of-thought generation with domain-aware feedback to refine behavior hypotheses over multiple rounds. Concretely, a VLM first proposes candidate trajectories for the agent; a <span style="color: #3273dc;">counterfactual critic</span> then suggests edge-case variations consistent with partial observations, prompting the VLM to expand or adjust its hypotheses in the next iteration. This creates a <span style="color: #3273dc;">self-improving cycle</span> where the VLM progressively internalizes edge cases from previous rounds, systematically uncovering not only typical behaviors but also rare or borderline maneuvers, ultimately yielding more robust trajectory predictions from minimal sensor data.
+              We validate TRACE on both ground-vehicle simulations and real-world marine autonomous surface vehicles. Experimental results show that our method consistently outperforms standard VLM-driven and purely model-based baselines, capturing a broader range of feasible agent behaviors despite sparse sensing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </body>
+</html>
+    </section>
+
+<!-- Methodology Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Methodology</h2>
+    <p class="has-text-centered">
+TRACE operates through an iterative three-component cycle: (i) Hypothesis Generation, where a VLM analyzes sparse observations to propose initial behavior hypotheses; (ii) Counterfactual Exploration, where a critic identifies overlooked edge-cases; (iii) Self-Improvement integrates both valid and rejected hypotheses into the VLM context for enhanced predictions.
+    </p>
+    <div class="box" style="margin-top: 2rem; text-align: center;">
+      <img src="assets/arch-main.png" alt="Architecture Diagram" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" />
+    </div>
+  </div>
+</section>
+<!-- Experimental Videos Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Experimental Videos</h2>
+    <p class="has-text-centered">
+       We evaluate TRACE in scenarios involving two agents, an observer and a target, operating in a shared environment. Due to real-world constraints (such as limited sensor range or communication bandwidth restrictions), the observer receives only sporadic measurements of the target agent's state. Our goal is to predict the target's behavior hypotheses--trajectories--despite this measurement sparsity, enabling effective decision-making by the observer.
+      We present three example tasks demonstrating our approach in action. Each video highlights a distinct scenario, showcasing both the baseline predictions and the refined outcomes after iterative adjustments.
+    </p>
+    
+<div style="width:70%; margin: 0 auto;">
+  <!-- Video 1 -->
+  <div class="box" style="margin-top: 2rem;">
+    <h3 class="title is-4 mt-3">Task 1</h3>
+    <video controls style="width: 100%; border-radius: 8px;">
+      <source src="assets/t1_sm.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <p></p>
+  </div>
+  
+  <!-- Video 2 -->
+  <div class="box" style="margin-top: 2rem;">
+    <h3 class="title is-4 mt-3">Task 2</h3>
+    <video controls style="width: 100%; border-radius: 8px;">
+      <source src="assets/t2_sm.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <p></p>
+  </div>
+  
+  <!-- Video 3 -->
+  <div class="box" style="margin-top: 2rem;">
+    <h3 class="title is-4 mt-3">Task 3</h3>
+    <video controls style="width: 100%; border-radius: 8px;">
+      <source src="assets/t3_sm.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <p></p>
+  </div>
+</div>
+</section>
+
+<!-- Results Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Results</h2>
+    <p class="has-text-centered">
+      Our experiments reveal four key insights: enhanced hypothesis coverage, discovery of rare maneuvers, self-improving VLM outputs, and reduced invalid trajectories.
+    </p>
+    
+    <!-- First row: Key Findings 1 and 2 -->
+    <div class="tile is-ancestor">
+      <!-- Key Finding 1 -->
+      <div class="tile is-parent">
+        <div class="tile is-child box">
+          <h3 class="title is-4">Key Finding 1</h3>
+          <p>
+            <strong>Counterfactual exploration expands the behavioral hypothesis space.</strong>
+            TRACE significantly outperforms baseline methods by achieving 84.6–93.1% coverage compared to 57–64% for the next-best approach. The table below summarizes the coverage ratios across tasks T1–T5.
+          </p>
+          <div class="table-container">
+            <table class="table is-striped is-bordered is-fullwidth" style="font-size: 0.85em;">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>T1</th>
+                  <th>T2</th>
+                  <th>T3</th>
+                  <th>T4</th>
+                  <th>T5</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CoT</td>
+                  <td>0.2%</td>
+                  <td>2.1%</td>
+                  <td>1.8%</td>
+                  <td>2.6%</td>
+                  <td>3.8%</td>
+                </tr>
+                <tr>
+                  <td>GIoT</td>
+                  <td>58.3%</td>
+                  <td>62.7%</td>
+                  <td>50.7%</td>
+                  <td>64.2%</td>
+                  <td>59.5%</td>
+                </tr>
+                <tr>
+                  <td>ToT</td>
+                  <td>47.1%</td>
+                  <td>51.4%</td>
+                  <td>40.4%</td>
+                  <td>63.2%</td>
+                  <td>59.0%</td>
+                </tr>
+                <tr style="background-color: #E0F2F1;">
+                  <td><strong>TRACE (Ours)</strong></td>
+                  <td><strong>84.6%</strong></td>
+                  <td><strong>87.3%</strong></td>
+                  <td><strong>82.9%</strong></td>
+                  <td><strong>93.1%</strong></td>
+                  <td><strong>90.4%</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Key Finding 2 -->
+      <div class="tile is-parent">
+        <div class="tile is-child box">
+          <h3 class="title is-4">Key Finding 2</h3>
+          <p>
+            <strong>Iterative tree-of-thought expansion reveals rare but critical maneuvers.</strong>
+            By exploring creative, edge-case trajectories, TRACE uncovers unconventional yet valid maneuvers – such as unexpected passing strategies and nuanced right-turn alternatives – that baseline methods consistently miss.
+          </p>
+          <div class="box" style="overflow-x: auto; text-align: center;">
+            <img id="res-thumbnail" src="assets/result1.png" alt="Qualitative Result Thumbnail" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); cursor: pointer;" />
+            <p class="mt-2">
+              <a id="enlarge-link" style="cursor: pointer;">Click to enlarge image to view comparison with baselines</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Second row: Key Findings 3 and 4 -->
+    <div class="tile is-ancestor" style="margin-top: 2rem;">
+      <!-- Key Finding 3 -->
+      <div class="tile is-parent">
+        <div class="tile is-child box">
+          <h3 class="title is-4">Key Finding 3</h3>
+          <p>
+            <strong>VLM's outputs self-improve through iterative counterfactual exposure.</strong>
+            As measurement updates accumulate, the VLM learns from counterfactual feedback – increasing its diversity of valid trajectory proposals by 31.8% by the fifth update.
+          </p>
+          <div class="box" style="text-align: center;">
+            <img src="assets/result2.png" alt="Graph showing increase in trajectory diversity" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" />
+          </div>
+        </div>
+      </div>
+      
+      <!-- Key Finding 4 -->
+      <div class="tile is-parent">
+        <div class="tile is-child box">
+          <h3 class="title is-4">Key Finding 4</h3>
+          <p>
+            <strong>Iterative world model feedback teaches VLMs to reduce invalid trajectories.</strong>
+            By incorporating negative feedback from the world model, TRACE substantially lowers the rate of invalid predictions, especially in complex maritime scenarios.
+          </p>
+          <div class="table-container">
+            <table class="table is-striped is-bordered is-fullwidth">
+              <thead>
+                <tr>
+                  <th>Update</th>
+                  <th>T1</th>
+                  <th>T2</th>
+                  <th>T3</th>
+                  <th>T4</th>
+                  <th>T5</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>M1</td>
+                  <td>24.8%</td>
+                  <td>26.3%</td>
+                  <td>25.7%</td>
+                  <td>22.4%</td>
+                  <td>23.9%</td>
+                </tr>
+                <tr>
+                  <td>M2</td>
+                  <td>19.5%</td>
+                  <td>21.7%</td>
+                  <td>22.3%</td>
+                  <td>18.1%</td>
+                  <td>19.2%</td>
+                </tr>
+                <tr>
+                  <td>M3</td>
+                  <td>14.2%</td>
+                  <td>15.6%</td>
+                  <td>17.8%</td>
+                  <td>13.2%</td>
+                  <td>14.7%</td>
+                </tr>
+                <tr>
+                  <td>M4</td>
+                  <td>9.8%</td>
+                  <td>11.3%</td>
+                  <td>12.6%</td>
+                  <td>8.7%</td>
+                  <td>10.1%</td>
+                </tr>
+                <tr>
+                  <td>M5</td>
+                  <td>7.2%</td>
+                  <td>8.5%</td>
+                  <td>9.4%</td>
+                  <td>6.8%</td>
+                  <td>7.9%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End of second row tiles -->
+    
+  </div>
+</section>
+
+<!-- Modal for Enlarged Image -->
+<div class="modal" id="enlarge-modal">
+  <div class="modal-background"></div>
+  <div class="modal-content" style="max-width: 90%;">
+    <p class="image">
+      <img src="assets/res1-5.png" alt="Enlarged Qualitative Results" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" />
+    </p>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<script>
+// JavaScript to toggle modal visibility
+document.addEventListener('DOMContentLoaded', function() {
+  var modal = document.getElementById('enlarge-modal');
+  var thumbnail = document.getElementById('res-thumbnail');
+  var enlargeLink = document.getElementById('enlarge-link');
+  var modalClose = document.querySelector('#enlarge-modal .modal-close');
+  var modalBackground = document.querySelector('#enlarge-modal .modal-background');
+
+  function openModal() {
+    modal.classList.add('is-active');
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-active');
+  }
+
+  thumbnail.addEventListener('click', openModal);
+  enlargeLink.addEventListener('click', openModal);
+  modalClose.addEventListener('click', closeModal);
+  modalBackground.addEventListener('click', closeModal);
+});
+</script>
+
+<!-- Supplementary Video Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Supplementary Video</h2>
+    <div class="box" style="margin-top: 2rem; text-align: center;">
+      <video controls style="width: 100%; border-radius: 8px;">
+        <source src="assets/iros_sm.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <p class="has-text-centered mt-3">
+        Supplementary video.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- Citation Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Citation</h2>
+    <p class="has-text-centered">
+      Please use the following BibTeX entry to cite our work:
+    </p>
+    <pre style="background-color: #f5f5f5; padding: 1rem; border-radius: 8px; overflow-x: auto;">
+@misc{trace2025,
+  title = {TRACE: A Self-Improving Framework for Robot Behavior Forecasting with Vision-Language Models},
+  author = {Gokul Puthumanaillam and Paulo Padrao and Jose Fuentes and Pranay Thangeda and William E. Schafer and Jae Hyuk Song and Karan Jagdale and Leonardo Bobadilla and Melkior Ornik},
+  year = {2025},
+  eprint = {2503.00761},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.RO},
+  url = {https://arxiv.org/abs/2503.00761}
+}
+    </pre>
+  </div>
+</section>
 </html>
