@@ -4,13 +4,12 @@
     <meta charset="utf-8" />
     <meta
       name="description"
-      content="TRACE: A Self-Improving Framework for Robot Behavior Forecasting with Vision-Language Models"
+      content="Online Learning of Deceptive Policies under Intermittent Observation"
     />
     <meta name="keywords" content="Keywords" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
-      TRACE: A Self-Improving Framework for Robot Behavior Forecasting with
-      Vision-Language Models
+      Online Learning of Deceptive Policies under Intermittent Observation
     </title>
     <link
       href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
@@ -24,6 +23,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        }
+      };
+    </script>
     <style>
       .question-section {
         margin: 2rem 0;
@@ -75,62 +84,23 @@
           <div class="columns is-centered">
             <div class="column has-text-centered">
               <h1 class="title is-1 publication-title">
-                TRACE: A Self-Improving Framework for Robot Behavior Forecasting
-                with Vision-Language Models
+                Online Learning of Deceptive Policies under Intermittent Observation
               </h1>
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
-                  <a href="https://gokulp01.github.io/">Gokul Puthumanaillam</a><sup>1</sup><span class="author-equal">*</span>,
-                </span>
-                <span class="author-block">
-                  <a href="https://scholar.google.com/citations?user=O8ZG568AAAAJ&hl=en">Paulo Padrao</a><sup>2</sup><span class="author-equal">*</span>,
-                </span>
-                <span class="author-block">
-                  <a href="https://scholar.google.com/citations?user=w8-ptKYAAAAJ&hl=en">Jose Fuentes</a><sup>2</sup><span class="author-equal">*</span>,
-                </span>
-                <span class="author-block">
-                  <a href="https://pranaythangeda.com/">Pranay Thangeda</a><sup>1</sup>,
-                </span>
-                <span class="author-block">
-                  <a>William E. Schafer</a><sup>1</sup>,
-                </span>
-                <span class="author-block">
-                  <a>Jae Hyuk Song</a><sup>1</sup>,
-                </span>
-                <span class="author-block">
-                  <a href="https://scholar.google.com/citations?user=lN1xO34AAAAJ&hl=en">Karan Jagdale</a><sup>3</sup>,
-                </span>
-                <span class="author-block">
-                  <a href="https://users.cis.fiu.edu/~jabobadi/">Leonardo Bobadilla</a><sup>2</sup>,
-                </span>
-                <span class="author-block">
-                  <a href="https://mornik.web.illinois.edu/">Melkior Ornik</a><sup>1</sup>
+                  Anonymous
                 </span>
               </div>
               
-              <div class="is-size-6 publication-institutions">
-                <span class="author-block"><sup>1</sup> University of Illinois Urbana-Champaign</span>
-                <span class="author-block"><sup>2</sup> Florida International University</span>
-                <span class="author-block"><sup>3</sup> Lucid Group, Inc.</span>
-              </div>
               
-              <div class="is-size-7 publication-note mt-2">
-                <span>* Equal contribution</span>
-              </div>
               
-              <!-- Institution Logos -->
-              <div class="institution-logos">
-                <img src="assets/uiuc.png" alt="UIUC Logo" class="institution-logo" />
-                <img src="assets/fiu.svg" alt="FIU Logo" class="institution-logo" />
-                <!--<img src="assets/lucid.jpg" alt="Lucid Logo" class="institution-logo" />-->
-              </div>
               
               <div class="column has-text-centered mt-4">
                 <div class="publication-links">
                   <!-- PDF Link. -->
                   <span class="link-block">
                     <a
-                      href="https://arxiv.org/abs/2503.00761"
+                      href="paper.pdf"
                       class="button is-normal is-rounded is-dark"
                     >
                       <span class="icon">
@@ -142,7 +112,7 @@
                   <!-- Code Link. -->
                   <span class="link-block">
                     <a
-                      href="https://github.com/trace-robotics/trace-robotics.github.io"
+                      href="https://github.com/tom-deception/tom-deception.github.io"
                       class="button is-normal is-rounded is-dark"
                     >
                       <span class="icon">
@@ -164,15 +134,26 @@
   <!-- Abstract Section -->
   <section class="section">
     <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
+      <div class="columns is-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
+          <h2 class="title is-3 has-text-centered">Abstract</h2>
           <div class="content has-text-justified">
-            <p>
-              Predicting the near-term behavior of a reactive agent is crucial in many robotic scenarios, yet remains challenging when observations of that agent are sparse or intermittent. Vision-Language Models (VLMs) offer a promising avenue by integrating textual domain knowledge with visual cues, but their one-shot predictions often miss important edge cases and unusual maneuvers. Our key insight is that <span style="color: #3273dc;">iterative, counterfactual exploration</span>--where a dedicated module probes each proposed behavior hypothesis, explicitly represented as a plausible trajectory, for overlooked possibilities--can significantly enhance VLM-based behavioral forecasting.
-              We present <span style="color: #3273dc;">TRACE (Tree-of-thought Reasoning And Counterfactual Exploration)</span>, an inference framework that couples tree-of-thought generation with domain-aware feedback to refine behavior hypotheses over multiple rounds. Concretely, a VLM first proposes candidate trajectories for the agent; a <span style="color: #3273dc;">counterfactual critic</span> then suggests edge-case variations consistent with partial observations, prompting the VLM to expand or adjust its hypotheses in the next iteration. This creates a <span style="color: #3273dc;">self-improving cycle</span> where the VLM progressively internalizes edge cases from previous rounds, systematically uncovering not only typical behaviors but also rare or borderline maneuvers, ultimately yielding more robust trajectory predictions from minimal sensor data.
-              We validate TRACE on both ground-vehicle simulations and real-world marine autonomous surface vehicles. Experimental results show that our method consistently outperforms standard VLM-driven and purely model-based baselines, capturing a broader range of feasible agent behaviors despite sparse sensing.
-            </p>
+            <div style="display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 1rem;">
+              <div style="flex: 1;">
+                <p>
+                  In supervisory control settings, autonomous systems are not monitored continuously. Instead, monitoring often occurs at sporadic intervals within known bounds. We study the problem of deception, where an agent pursues a private objective while remaining plausibly compliant with a supervisor's reference policy when observations occur.
+                  Motivated by the behavior of real, human supervisors, we situate the problem within Theory of Mind: the representation of what an observer believes and expects to see.
+                  We show that Theory of Mind can be repurposed to steer online reinforcement learning (RL) toward such deceptive behavior. We model the supervisor's expectations and distill from them a single, calibrated scalar --- the expected evidence of deviation if an observation were to happen now. This scalar combines how unlike the reference and current action distributions appear, with the agent's belief that an observation is imminent. Injected as a state-dependent weight into a KL-regularized policy improvement step within an online RL loop, this scalar informs a closed-form update that smoothly trades off self-interest and compliance, thus sidestepping hand-crafted or heuristic policies. 
+                  In real-world, real-time hardware experiments on marine (ASV) and aerial (UAV) navigation, our ToM-guided RL runs online, achieves high return and success with observed-trace evidence calibrated to the supervisor's expectations.
+                </p>
+              </div>
+              <div style="flex: 0 0 300px; text-align: center;">
+                <img src="assets/teaseri.svg" alt="Teaser Figure" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" />
+                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem; text-align: left;">
+                  <em>Illustration of deception under intermittent observation. An observer assigns a task and specifies a reference behavior; the agent pursues a private objective. The observer sees only sporadic snapshots (state–action pairs). We ask: can we design an online policy that looks compliant when watched yet exploits unobserved intervals without exceeding a detectability budget?</em>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -182,15 +163,23 @@
 </html>
     </section>
 
-<!-- Methodology Section -->
+<!-- Problem Formulation Section -->
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Methodology</h2>
-    <p class="has-text-centered">
-TRACE operates through an iterative three-component cycle: (i) Hypothesis Generation, where a VLM analyzes sparse observations to propose initial behavior hypotheses; (ii) Counterfactual Exploration, where a critic identifies overlooked edge-cases; (iii) Self-Improvement integrates both valid and rejected hypotheses into the VLM context for enhanced predictions.
-    </p>
-    <div class="box" style="margin-top: 2rem; text-align: center;">
-      <img src="assets/arch-main.png" alt="Architecture Diagram" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" />
+    <h2 class="title is-3 has-text-centered">Problem Formulation</h2>
+    <div class="content has-text-justified">
+      <p>
+        Solving deception under intermittent observation is, at its core, a constrained stochastic control problem: maximize private return while keeping what is seen statistically consistent with a reference behavior. 
+        We decouple the problem into three parts and recombine them at decision time.
+        (i) <em>Observation:</em> model monitoring as a renewal, state-independent process with bounded gaps and maintain a belief over "time since last observation".
+        (ii) <em>Detectability:</em> specify how the supervisor would judge a state–action snapshot if observed, giving a per-step measure of "evidence of deviation."
+        (iii) <em>Control:</em> modulate actions online by trading off task value against that evidence. The resulting signal must be local in time and light enough to steer on-policy updates.
+        Existing approaches either plan jointly over hidden monitoring (quickly intractable), keep the agent globally close to the reference (over-constraining when it is safe to deviate), or adversarially train a detector. 
+        What is missing is a calibrated, state- and time-local quantity that answers: "If I were seen now, how incriminating would this action look?"
+        Our first instinct would be to model the supervisor's inference end-to-end, i.e., a rich ToM that tracks the supervisor's posterior, path-dependent tests, and how partial observations shape future scrutiny. 
+        In practice that is overkill: it is computationally heavy, brittle online, and couples learning to a second adaptive model. 
+        Guided by the setup in Sec.~\ref{sec:ps}, we hypothesize that if, at each step, we (i) estimate the probability of being observed under renewal, state-independent monitoring and (ii) measure, at the current state, how far the agent's action distribution departs from the supervisor's reference, then combining these into a single per-step quantity yields a calibrated signal <em>sufficient</em> to drive an online algorithm. To know how this is done, please read our paper.
+      </p>
     </div>
   </div>
 </section>
@@ -198,17 +187,18 @@ TRACE operates through an iterative three-component cycle: (i) Hypothesis Genera
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Experimental Videos</h2>
-    <p class="has-text-centered">
-       We evaluate TRACE in scenarios involving two agents, an observer and a target, operating in a shared environment. Due to real-world constraints (such as limited sensor range or communication bandwidth restrictions), the observer receives only sporadic measurements of the target agent's state. Our goal is to predict the target's behavior hypotheses--trajectories--despite this measurement sparsity, enabling effective decision-making by the observer.
-      We present three example tasks demonstrating our approach in action. Each video highlights a distinct scenario, showcasing both the baseline predictions and the refined outcomes after iterative adjustments.
+    <p class="has-text-justified">
+       We evaluate our method in an agent–observer setting where an external observer (e.g., an overhead camera) provides sporadic monitoring consistent with the model and reveals the full state only at observation times. The observer also specifies a reference policy $\pi^S(\cdot\mid s)$ that encodes the behavior expected when the agent is observed, while the agent executes its own task-optimized policy $\pi(\cdot\mid s)$ subject to the detectability budget defined earlier. 
+       Between observations the agent receives no information from the observer. 
+       A one-step delayed token informs the agent ex post whether time $t$ was observed (it is notified at $t{+}1$ if $O_t{=}1$). The agent has its own private goal, given by the return $J_A(\pi)$, and must keep its average evidential exposure within $\mathcal R_{\mathrm{det}}^{\mathrm{avg}}(\pi)\le \varepsilon$.
     </p>
     
 <div style="width:70%; margin: 0 auto;">
   <!-- Video 1 -->
   <div class="box" style="margin-top: 2rem;">
-    <h3 class="title is-4 mt-3">Task 1</h3>
+    <h3 class="title is-4 mt-3">Experiment 1</h3>
     <video controls style="width: 100%; border-radius: 8px;">
-      <source src="assets/t1_sm.mp4" type="video/mp4" />
+      <source src="assets/expt1.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
     <p></p>
@@ -216,9 +206,9 @@ TRACE operates through an iterative three-component cycle: (i) Hypothesis Genera
   
   <!-- Video 2 -->
   <div class="box" style="margin-top: 2rem;">
-    <h3 class="title is-4 mt-3">Task 2</h3>
+    <h3 class="title is-4 mt-3">Experiment 2</h3>
     <video controls style="width: 100%; border-radius: 8px;">
-      <source src="assets/t2_sm.mp4" type="video/mp4" />
+      <source src="assets/expt2.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
     <p></p>
@@ -226,9 +216,9 @@ TRACE operates through an iterative three-component cycle: (i) Hypothesis Genera
   
   <!-- Video 3 -->
   <div class="box" style="margin-top: 2rem;">
-    <h3 class="title is-4 mt-3">Task 3</h3>
+    <h3 class="title is-4 mt-3">Experiment 3</h3>
     <video controls style="width: 100%; border-radius: 8px;">
-      <source src="assets/t3_sm.mp4" type="video/mp4" />
+      <source src="assets/expt3.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
     <p></p>
@@ -241,8 +231,13 @@ TRACE operates through an iterative three-component cycle: (i) Hypothesis Genera
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Results</h2>
     <p class="has-text-centered">
-      Our experiments reveal four key insights: enhanced hypothesis coverage, discovery of rare maneuvers, self-improving VLM outputs, and reduced invalid trajectories.
+      Our experiments reveal five key insights about ToM-conditioned RL performance across different scenarios.
     </p>
+    
+    <!-- Table 1 -->
+    <div class="box" style="margin-top: 2rem; text-align: center;">
+      <img src="assets/tab1.png" alt="Table 1: Experimental Results" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" />
+    </div>
     
     <!-- First row: Key Findings 1 and 2 -->
     <div class="tile is-ancestor">
@@ -251,56 +246,11 @@ TRACE operates through an iterative three-component cycle: (i) Hypothesis Genera
         <div class="tile is-child box">
           <h3 class="title is-4">Key Finding 1</h3>
           <p>
-            <strong>Counterfactual exploration expands the behavioral hypothesis space.</strong>
-            TRACE significantly outperforms baseline methods by achieving 84.6–93.1% coverage compared to 57–64% for the next-best approach. The table below summarizes the coverage ratios across tasks T1–T5.
+            <strong>ToM-conditioned RL maintains near–task-optimal success while operating at near–always-compliant stealth.</strong>
+            Our method achieves high task performance while maintaining low detectability across different observation patterns.
           </p>
-          <div class="table-container">
-            <table class="table is-striped is-bordered is-fullwidth" style="font-size: 0.85em;">
-              <thead>
-                <tr>
-                  <th>Method</th>
-                  <th>T1</th>
-                  <th>T2</th>
-                  <th>T3</th>
-                  <th>T4</th>
-                  <th>T5</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>CoT</td>
-                  <td>0.2%</td>
-                  <td>2.1%</td>
-                  <td>1.8%</td>
-                  <td>2.6%</td>
-                  <td>3.8%</td>
-                </tr>
-                <tr>
-                  <td>GIoT</td>
-                  <td>58.3%</td>
-                  <td>62.7%</td>
-                  <td>50.7%</td>
-                  <td>64.2%</td>
-                  <td>59.5%</td>
-                </tr>
-                <tr>
-                  <td>ToT</td>
-                  <td>47.1%</td>
-                  <td>51.4%</td>
-                  <td>40.4%</td>
-                  <td>63.2%</td>
-                  <td>59.0%</td>
-                </tr>
-                <tr style="background-color: #E0F2F1;">
-                  <td><strong>TRACE (Ours)</strong></td>
-                  <td><strong>84.6%</strong></td>
-                  <td><strong>87.3%</strong></td>
-                  <td><strong>82.9%</strong></td>
-                  <td><strong>93.1%</strong></td>
-                  <td><strong>90.4%</strong></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="box" style="text-align: center;">
+            <img src="assets/kf1.svg" alt="Key Finding 1" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" />
           </div>
         </div>
       </div>
@@ -310,98 +260,46 @@ TRACE operates through an iterative three-component cycle: (i) Hypothesis Genera
         <div class="tile is-child box">
           <h3 class="title is-4">Key Finding 2</h3>
           <p>
-            <strong>Iterative tree-of-thought expansion reveals rare but critical maneuvers.</strong>
-            By exploring creative, edge-case trajectories, TRACE uncovers unconventional yet valid maneuvers – such as unexpected passing strategies and nuanced right-turn alternatives – that baseline methods consistently miss.
+            <strong>Our method scales seamlessly while remaining low detectability.</strong>
+            The approach maintains consistent performance and stealth characteristics across different problem scales and complexities.
           </p>
-          <div class="box" style="overflow-x: auto; text-align: center;">
-            <img id="res-thumbnail" src="assets/result1.png" alt="Qualitative Result Thumbnail" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); cursor: pointer;" />
-            <p class="mt-2">
-              <a id="enlarge-link" style="cursor: pointer;">Click to enlarge image to view comparison with baselines</a>
-            </p>
+          <div class="box" style="text-align: center;">
+            <img src="assets/kf2.svg" alt="Key Finding 2" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" />
           </div>
         </div>
       </div>
     </div>
     
-    <!-- Second row: Key Findings 3 and 4 -->
+    <!-- Second row: Key Findings 3 and 4&5 -->
     <div class="tile is-ancestor" style="margin-top: 2rem;">
       <!-- Key Finding 3 -->
       <div class="tile is-parent">
         <div class="tile is-child box">
           <h3 class="title is-4">Key Finding 3</h3>
           <p>
-            <strong>VLM's outputs self-improve through iterative counterfactual exposure.</strong>
-            As measurement updates accumulate, the VLM learns from counterfactual feedback – increasing its diversity of valid trajectory proposals by 31.8% by the fifth update.
+            <strong>ToM-conditioned RL exhibits creative maneuvers and accelerates online learning vs baselines.</strong>
+            Our approach discovers novel strategies and learns more efficiently compared to standard reinforcement learning methods.
           </p>
           <div class="box" style="text-align: center;">
-            <img src="assets/result2.png" alt="Graph showing increase in trajectory diversity" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" />
+            <img src="assets/kf3.svg" alt="Key Finding 3" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" />
           </div>
         </div>
       </div>
       
-      <!-- Key Finding 4 -->
+      <!-- Key Findings 4 and 5 -->
       <div class="tile is-parent">
         <div class="tile is-child box">
-          <h3 class="title is-4">Key Finding 4</h3>
+          <h3 class="title is-4">Key Findings 4 & 5</h3>
           <p>
-            <strong>Iterative world model feedback teaches VLMs to reduce invalid trajectories.</strong>
-            By incorporating negative feedback from the world model, TRACE substantially lowers the rate of invalid predictions, especially in complex maritime scenarios.
+            <strong>ToM scalar is numerically reliable and context-discriminative.</strong>
+            The Theory of Mind scalar provides consistent and meaningful signals that effectively distinguish between different contextual situations.
           </p>
-          <div class="table-container">
-            <table class="table is-striped is-bordered is-fullwidth">
-              <thead>
-                <tr>
-                  <th>Update</th>
-                  <th>T1</th>
-                  <th>T2</th>
-                  <th>T3</th>
-                  <th>T4</th>
-                  <th>T5</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>M1</td>
-                  <td>24.8%</td>
-                  <td>26.3%</td>
-                  <td>25.7%</td>
-                  <td>22.4%</td>
-                  <td>23.9%</td>
-                </tr>
-                <tr>
-                  <td>M2</td>
-                  <td>19.5%</td>
-                  <td>21.7%</td>
-                  <td>22.3%</td>
-                  <td>18.1%</td>
-                  <td>19.2%</td>
-                </tr>
-                <tr>
-                  <td>M3</td>
-                  <td>14.2%</td>
-                  <td>15.6%</td>
-                  <td>17.8%</td>
-                  <td>13.2%</td>
-                  <td>14.7%</td>
-                </tr>
-                <tr>
-                  <td>M4</td>
-                  <td>9.8%</td>
-                  <td>11.3%</td>
-                  <td>12.6%</td>
-                  <td>8.7%</td>
-                  <td>10.1%</td>
-                </tr>
-                <tr>
-                  <td>M5</td>
-                  <td>7.2%</td>
-                  <td>8.5%</td>
-                  <td>9.4%</td>
-                  <td>6.8%</td>
-                  <td>7.9%</td>
-                </tr>
-              </tbody>
-            </table>
+          <p>
+            <strong>Wider observation gaps are automatically converted into higher reward without retuning.</strong>
+            The system naturally adapts to longer periods between observations by increasing reward optimization without requiring manual parameter adjustments.
+          </p>
+          <div class="box" style="text-align: center;">
+            <img src="assets/kf45.svg" alt="Key Findings 4 & 5" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" />
           </div>
         </div>
       </div>
@@ -410,56 +308,7 @@ TRACE operates through an iterative three-component cycle: (i) Hypothesis Genera
   </div>
 </section>
 
-<!-- Modal for Enlarged Image -->
-<div class="modal" id="enlarge-modal">
-  <div class="modal-background"></div>
-  <div class="modal-content" style="max-width: 90%;">
-    <p class="image">
-      <img src="assets/res1-5.png" alt="Enlarged Qualitative Results" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" />
-    </p>
-  </div>
-  <button class="modal-close is-large" aria-label="close"></button>
-</div>
 
-<script>
-// JavaScript to toggle modal visibility
-document.addEventListener('DOMContentLoaded', function() {
-  var modal = document.getElementById('enlarge-modal');
-  var thumbnail = document.getElementById('res-thumbnail');
-  var enlargeLink = document.getElementById('enlarge-link');
-  var modalClose = document.querySelector('#enlarge-modal .modal-close');
-  var modalBackground = document.querySelector('#enlarge-modal .modal-background');
-
-  function openModal() {
-    modal.classList.add('is-active');
-  }
-
-  function closeModal() {
-    modal.classList.remove('is-active');
-  }
-
-  thumbnail.addEventListener('click', openModal);
-  enlargeLink.addEventListener('click', openModal);
-  modalClose.addEventListener('click', closeModal);
-  modalBackground.addEventListener('click', closeModal);
-});
-</script>
-
-<!-- Supplementary Video Section -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Supplementary Video</h2>
-    <div class="box" style="margin-top: 2rem; text-align: center;">
-      <video controls style="width: 100%; border-radius: 8px;">
-        <source src="assets/iros_sm.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <p class="has-text-centered mt-3">
-        Supplementary video.
-      </p>
-    </div>
-  </div>
-</section>
 <!-- Citation Section -->
 <section class="section">
   <div class="container is-max-desktop">
@@ -469,13 +318,9 @@ document.addEventListener('DOMContentLoaded', function() {
     </p>
     <pre style="background-color: #f5f5f5; padding: 1rem; border-radius: 8px; overflow-x: auto;">
 @misc{trace2025,
-  title = {TRACE: A Self-Improving Framework for Robot Behavior Forecasting with Vision-Language Models},
-  author = {Gokul Puthumanaillam and Paulo Padrao and Jose Fuentes and Pranay Thangeda and William E. Schafer and Jae Hyuk Song and Karan Jagdale and Leonardo Bobadilla and Melkior Ornik},
-  year = {2025},
-  eprint = {2503.00761},
-  archivePrefix = {arXiv},
-  primaryClass = {cs.RO},
-  url = {https://arxiv.org/abs/2503.00761}
+  title = {Online Learning of Deceptive Policies under Intermittent Observation},
+  author = {Anonymous},
+  year = {2025}
 }
     </pre>
   </div>
